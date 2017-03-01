@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ScrollView
+		android:id="@+id/scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbarThumbVertical="@drawable/bar">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/transparent"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/content_layout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:background="@android:color/white">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp"
+						android:layout_marginLeft="12dp"
+						android:gravity="center"
+						android:text="已订阅"
+						android:textColor="@color/color_1f9bbd"
+						android:textSize="16sp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp"
+						android:layout_marginLeft="12dp"
+						android:text="点击删除   拖动排序"
+						android:gravity="center"
+						android:textColor="@color/color_909090"
+						android:textSize="12sp"/>
+				</LinearLayout>
+
+				<com.example.android_pra.ui.SubscribeDragGridView
+					android:id="@+id/subcribe_gridview"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="50dp"
+					android:gravity="center"
+					android:listSelector="@android:color/transparent"
+					android:numColumns="3"
+					android:horizontalSpacing="16dp"
+					android:paddingBottom="23dp"
+					android:paddingTop="24dp"
+					android:scrollbarThumbVertical="@drawable/bar"
+					android:scrollbars="vertical"
+					android:stretchMode="columnWidth"
+					android:verticalSpacing="16dp"/>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.5dp"
+					android:background="@color/color_c4c4c4"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp"
+						android:layout_marginLeft="12dp"
+						android:text="未订阅"
+						android:textColor="@color/color_1f9bbd"
+						android:textSize="16sp"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="24dp"
+						android:layout_marginLeft="12dp"
+						android:text="点击添加"
+						android:textColor="@color/color_909090"
+						android:textSize="12sp"/>
+				</LinearLayout>
+
+				<com.example.android_pra.ui.NoScrollGridView
+					android:id="@+id/unsubscribe_gridview"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="50dp"
+					android:gravity="center"
+					android:horizontalSpacing="16dp"
+					android:listSelector="@android:color/transparent"
+					android:numColumns="3"
+					android:paddingBottom="38dp"
+					android:paddingTop="24dp"
+					android:scrollbarThumbVertical="@drawable/bar"
+					android:scrollbars="vertical"
+					android:stretchMode="columnWidth"
+					android:verticalSpacing="16dp"/>
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/subscribe_empty_textview"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/pop_text_view_bg"
+				android:gravity="center"
+				android:padding="10dp"
+				android:text="至少要订阅一个哦~"
+				android:textColor="#f3f3f3"
+				android:textSize="13dp"
+				android:visibility="gone"/>
+		</LinearLayout>
+	</ScrollView>
+    
+
+
+</RelativeLayout>
